@@ -8,6 +8,7 @@ pipeline{
         }
         stage ('Testing Stage'){
             steps{
+                bat 'mvnw spring-boot:run'
                 bat 'mvnw test'
             }
 
