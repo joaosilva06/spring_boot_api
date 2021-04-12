@@ -3,14 +3,14 @@ pipeline{
     stages{
         stage ('Compile Stage'){
             steps{
-                bat 'mvnw clean install'
+                bat 'mvnw clean package -DskipTests=true'
             }
         }
 
         stage ('Deploy to container test'){
             steps{
                 bat 'docker build -f Dockerfile -t sp-boot-api .'
-                bat 'docker run -p 8085:8085 sp-boot-api'
+                bat 'docker run -p 8080:8085 sp-boot-api'
             }
         }
 

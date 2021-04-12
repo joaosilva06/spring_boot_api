@@ -10,7 +10,7 @@ public class CicdTestApplicationTest {
     public void deveRetornarCodSucesso(){
         RestAssured.given()
                 .when()
-                    .get("http://localhost:8080/")
+                    .get("http://localhost:8085/")
                 .then()
                     .statusCode(200);
 
