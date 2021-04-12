@@ -18,5 +18,11 @@ pipeline{
                 }
             }
         }
+        stage ('Deploy to container'){
+            steps{
+                bat 'docker build -f Dockerfile -t sp-boot-api .'
+                bat 'docker run -p 8085:8085 sp-boot-api'
+            }
+        }
     }
 }
