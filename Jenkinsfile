@@ -3,12 +3,12 @@ pipeline{
     stages{
         stage ('Compile Stage'){
             steps{
-                bat './mvnw clean compile'
+                bat 'mvnw clean compile'
             }
         }
         stage ('Testing Stage'){
             steps{
-                bat './mvnw test'
+                bat 'mvnw test'
             }
 
             post{
