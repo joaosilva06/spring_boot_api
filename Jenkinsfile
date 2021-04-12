@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage ('Compile Stage'){
             steps{
-                bat 'mvnw clean compile'
+                bat 'mvnw clean install'
             }
         }
 
