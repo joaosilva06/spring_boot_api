@@ -17,9 +17,9 @@ pipeline{
             }
         }
         stage ('Deploy to container test'){
-                    steps{
-                        bat 'docker build -f Dockerfile -t sp-boot-api .'
-                    }
-                }
+            steps{
+                bat 'docker build -f Dockerfile -t sp-boot-api .'
+            }
+        }
     }
 }
