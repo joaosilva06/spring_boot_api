@@ -15,7 +15,7 @@ public class CicdTestApplication {
 
 	@GetMapping
 	public String sayHello(){
-		return "Helllloooo World";
+		return "Hello World";
 	}
 
 }
